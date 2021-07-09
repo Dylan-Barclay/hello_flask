@@ -10,11 +10,11 @@ def index():
 def dojo():
   return "Dojo!"
 
-@app.route('/hello/<str:name>') # for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
+@app.route('/hello/<string:name>') # for a route '/hello/____' anything after '/hello/' gets passed as a variable 'name'
 def hi(name):
   return "Hi, " + str(name)
 
-@app.route('/repeat/<int:num>/<str:word>')
+@app.route('/repeat/<int:num>/<string:word>')
 def number_and_words(num, word):
   stuff = ''
   for x in range(0, int(num)):
