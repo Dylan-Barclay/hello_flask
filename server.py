@@ -19,8 +19,13 @@ def hi(name):
 def number_and_words(num, word):
   stuff = ''
   for x in range(0, int(num)):
-    stuff += word + ' '
+    stuff += str(word) + ' '
   return stuff
+
+@app.errorhandler(404)
+def page_not_found(e):
+    # note that we set the 404 status explicitly
+    return 'Sorry! No response. Try again.'
 
 
 
