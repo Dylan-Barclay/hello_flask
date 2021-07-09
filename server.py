@@ -17,7 +17,10 @@ def hi(name):
 
 @app.route('/repeat/<num>/<word>')
 def number_and_words(num, word):
-  return (word * int(num))
+  stuff = ''
+  for x in range(0, int(num)):
+    stuff += word + ' '
+  return stuff
 
 
 
