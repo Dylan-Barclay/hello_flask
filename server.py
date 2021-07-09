@@ -5,7 +5,7 @@ app = Flask(__name__)    # Create a new instance of the Flask class called "app"
 
 @app.route('/')          # The "@" decorator associates this route with the function immediately following
 def index():
-    return render_template("index.html", phrase="hello", times=5)	# notice the 2 new named arguments!
+    return "Hello World!"
 @app.route('/dojo')
 def dojo():
   return "Dojo!"
